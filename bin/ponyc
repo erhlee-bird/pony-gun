@@ -1,0 +1,8 @@
+#!/bin/sh
+# A wrapper for using a ponyc docker container as if it were a native binary.
+
+NAME="$(basename "$(pwd)")"
+docker run --rm -u "$(id -u):$(id -g)" \
+  -v "$(pwd)":/src/main \
+  ponylang/ponyc "$@" && \
+  [ -f main ] && echo "Renaming main to $NAME" && mv main "$NAME"
