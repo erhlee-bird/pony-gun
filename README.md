@@ -1,6 +1,6 @@
 pony-gun
 ===
-Implementation of a gun.js in Pony-lang.
+Implementation of a gun.js server in Pony-lang.
 
 Getting Started
 ===
